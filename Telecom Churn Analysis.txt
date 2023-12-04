@@ -1,0 +1,63 @@
+Telecom_Churn_Analysis
+
+
+******Descriptive Statistic
+SELECT 
+  AVG(Age) AS AvgAge,
+  MAX(Tenure_in_Months) AS MaxTenure
+FROM `churn-406820.telecom.TelecomAnalysis` 
+
+
+*****CustomerCount By Gender
+ SELECT
+  Gender,
+  COUNT(*) AS CustomerCount
+ FROM `churn-406820.telecom.TelecomAnalysis` 
+GROUP BY
+  Gender;
+
+
+*****Customer Count Per City
+
+  SELECT
+  City,
+  COUNT(*) AS CustomerCount
+ FROM `churn-406820.telecom.TelecomAnalysis` 
+GROUP BY
+  City
+ORDER BY
+ CustomerCount DESC
+
+
+
+*****Customer Tenure Analysis
+***(Rounded it to the nearest 10 months for grouping and data simplicity)
+
+ SELECT
+  ROUND(Tenure_in_Months, -1) AS TenureGroup,
+  COUNT(*) AS CustomerCount
+ FROM `churn-406820.telecom.TelecomAnalysis` 
+GROUP BY
+  TenureGroup
+ORDER BY
+  TenureGroup;
+
+
+*****Checking For The Number of Customers Using Internet Service
+  SELECT
+  Internet_Service,
+  COUNT(*) AS CustomerCount
+ FROM `churn-406820.telecom.TelecomAnalysis` 
+GROUP BY
+  Internet_Service;
+
+
+*****Count of Customers Based on Churn Category
+SELECT
+  Churn_Category,
+  COUNT(*) AS CustomerCount
+ FROM `churn-406820.telecom.TelecomAnalysis` 
+GROUP BY
+  Churn_Category;
+
+
