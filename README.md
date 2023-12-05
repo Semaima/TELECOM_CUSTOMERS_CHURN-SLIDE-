@@ -1,3 +1,5 @@
+https://public.tableau.com/app/profile/emaediong.joseph/viz/TELECOM_CUSTOMERS_CHURNSLIDE/Story1
+
 # TELECOM_CUSTOMERS_CHURN-SLIDE
 
 # Telecom Customers Churn Analysis
